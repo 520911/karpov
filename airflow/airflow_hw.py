@@ -10,15 +10,15 @@ from airflow.operators.python import get_current_context
 
 connection = {
     'host': 'https://clickhouse.lab.karpov.courses',
-    'password': 'dpo_python_2020',
-    'user': 'student',
-    'database': 'simulator_20221020'
+    'password': 'password',
+    'user': 'user',
+    'database': 'simulator_'
 }
 
 test_connection = {
     'host': 'https://clickhouse.lab.karpov.courses',
-    'password': '656e2b0c9c',
-    'user': 'student-rw',
+    'password': 'password',
+    'user': 'student',
     'database': 'test'
 }
 
