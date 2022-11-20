@@ -11,9 +11,9 @@ from sklearn.preprocessing import StandardScaler
 
 connection = {
     'host': 'https://clickhouse.lab.karpov.courses',
-    'password': 'dpo_python_2020',
+    'password': '',
     'user': 'student',
-    'database': 'simulator_20221020'
+    'database': 'simulator'
 }
 
 
@@ -107,10 +107,10 @@ def alert_hw():
     
     @task
     def send_tg(string, pick, alert):
-        key = '5725722292:AAHqk8iarmtpktV8z_YinY8RKLYXhBLaeio'
+        key = '5725XhBLaeio'
         bot = telegram.Bot(token=key)
-        chat_id = 1005875700
-        # chat_id = -817148946
+        chat_id = 1700
+        # chat_id = -817946
         bot.sendMessage(chat_id=chat_id, text=string)
         bot.sendPhoto(chat_id=chat_id, photo=pick)
         
