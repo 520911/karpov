@@ -15,9 +15,9 @@ from airflow.operators.python import get_current_context
 
 connection = {
     'host': 'https://clickhouse.lab.karpov.courses',
-    'password': 'dpo_python_2020',
+    'password': 'password',
     'user': 'student',
-    'database': 'simulator_20221020'
+    'database': 'simulator_'
 }
 
 
@@ -103,9 +103,9 @@ def report_hw():
     
     @task
     def send_tg(string, report):
-        key = '5725722292:AAHqk8iarmtpktV8z_YinY8RKLYXhBLaeio'
+        key = '5725RKLYXhBLaeio'
         bot = telegram.Bot(token=key)
-        chat_id = -817148946
+        chat_id = -81946
         bot.sendMessage(chat_id=chat_id, text=string)
         bot.sendPhoto(chat_id=chat_id, photo=report)
         
